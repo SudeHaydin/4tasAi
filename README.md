@@ -24,4 +24,4 @@ The AI was tested through real gameplay interactions.
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/ConnectFourAI.git
+   git clone https://github.com/SudeHaydin/4tasAi.git
