@@ -36,7 +36,7 @@ class ConnectFourGUI:
         self.draw_board()
 
     def draw_board(self):
-        """Tüm tahtayı çiz."""
+        
         self.canvas.delete("all")
         for r in range(ROWS):
             for c in range(COLS):
@@ -56,7 +56,7 @@ class ConnectFourGUI:
                 self.canvas.create_oval(x1, y1, x2, y2, fill=color, outline="black", width=2)
 
     def player_move(self, col):
-        """Oyuncunun hamlesi."""
+       
         if self.turn != 0 or self.board[0][col] != ' ':
             return
 
@@ -75,7 +75,7 @@ class ConnectFourGUI:
         self.root.after(500, self.ai_move)
 
     def ai_move(self):
-        """Yapay zekâ hamlesi."""
+        
         col, _ = minimax(self.board, 4, -math.inf, math.inf, True)
         make_move(self.board, col, 'O')
         self.draw_board()
@@ -91,7 +91,7 @@ class ConnectFourGUI:
         self.turn = 0
 
     def show_winner(self, message):
-        """Kazananı gösterip oyunu bitir."""
+        
         self.draw_board()
         messagebox.showinfo("Oyun Bitti", message)
         self.root.destroy()

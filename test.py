@@ -16,13 +16,11 @@ def random_agent_move(board):
 
 
 def run_simulation(depth_o, total_games):
-    """
-    Minimax AI'ı (O) Rastgele Ajana (X) karşı belirli sayıda oynatır.
-    """
+    
     wins_o = 0 
     wins_x = 0 
     draws = 0  
-    print(f"\n--- AI ({depth_o} Derinlik) vs. Rastgele Ajan Testi ---")
+    print(f"\n--- AI ({depth_o} Derinlik) vs. Rastgele Ajan Testi")
     print(f"Toplam Oyun Sayısı: {total_games}\n")
 
     for game_num in range(1, total_games + 1):
@@ -77,7 +75,7 @@ def run_simulation(depth_o, total_games):
         
   
     print("\n" + "="*40)
-    print("        NİHAİ TEST SONUÇLARI")
+    print("        TEST SONUÇLARI")
     print("="*40)
     print(f"Toplam Oyun: {total_games}")
     print(f"AI (O) Galibiyeti: {wins_o} (% {wins_o / total_games * 100:.2f})")
